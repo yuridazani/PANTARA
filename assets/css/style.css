@@ -1,0 +1,7 @@
+/* Kosongkan atau isi jika ada style custom di luar Tailwind */
+/* Contoh untuk ikon kontekstual default jika tidak ada gambar ikon */
+.custom-div-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

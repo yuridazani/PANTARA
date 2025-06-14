@@ -1,0 +1,45 @@
+/pantara/
+├── admin/
+│   ├── index.php                     # Halaman Login Admin
+│   ├── dashboard.php                 # Halaman Dashboard setelah admin login
+│   ├── data_kecelakaan.php           # Halaman utama untuk CRUD data kecelakaan
+│   ├── form_tambah_kecelakaan.php    # Form untuk menambah data kecelakaan baru
+│   ├── form_edit_kecelakaan.php      # Form untuk mengedit data kecelakaan
+│   ├── form_impor_data.php           # Form untuk mengunggah file Excel/CSV
+│   ├── proses_login.php              # Skrip PHP untuk memproses login admin
+│   ├── proses_crud.php               # Skrip PHP untuk memproses tambah, edit, hapus data kecelakaan
+│   ├── proses_impor.php              # Skrip PHP untuk memproses impor data dari Excel/CSV
+│   ├── logout.php                    # Skrip PHP untuk proses logout admin
+│   └── template/
+│       ├── header_admin.php          # File template header untuk semua halaman admin
+│       └── footer_admin.php          # File template footer untuk semua halaman admin
+│
+├── assets/
+│   ├── css/
+│   │   ├── style.css                 # File CSS kustom (jika ada, selain Tailwind)
+│   │   └── output.css                # (Opsional) File output jika kamu build Tailwind CSS secara lokal
+│   ├── js/
+│   │   ├── map_script.js             # Skrip JavaScript utama untuk logika peta Leaflet di sisi publik
+│   │   └── admin_script.js           # (Opsional) Skrip JavaScript khusus untuk halaman admin jika diperlukan
+│   └── images/
+│       ├── jalan-rusak-icon.png      # (Contoh) Ikon untuk layer kontekstual
+│       ├── penerangan-minim-icon.png # (Contoh) Ikon untuk layer kontekstual
+│       ├── pasar-icon.png            # (Contoh) Ikon untuk layer kontekstual
+│       └── default-konteks-icon.png  # (Contoh) Ikon default
+│
+├── config/
+│   ├── database.php                  # Skrip PHP untuk konfigurasi dan koneksi ke database MySQL
+│   └── functions.php                 # Skrip PHP berisi fungsi-fungsi bantuan (misal: check_admin_login, sanitize_input)
+│
+├── includes/
+│   ├── header_public.php             # File template header untuk semua halaman publik
+│   └── footer_public.php             # File template footer untuk semua halaman publik
+│
+├── vendor/                             # Folder ini akan otomatis terbuat jika kamu menggunakan Composer
+│   └── autoload.php                  # File penting dari Composer untuk PhpSpreadsheet
+│   └── (dan folder-folder lain dari library PhpSpreadsheet)
+│
+├── index.php                         # Halaman utama publik yang menampilkan peta SIG
+├── get_data_kecelakaan.php           # Endpoint API (PHP) untuk mengambil data kecelakaan (JSON)
+├── get_data_kontekstual.php          # Endpoint API (PHP) untuk mengambil data kontekstual (JSON)
+└── (Opsional) buat_hash.php          # File PHP sementara untuk generate hash password admin (HAPUS SETELAH DIGUNAKAN)
